@@ -21,7 +21,6 @@ const publicRoutes = [
         path: '/profile',
         component: Profile,
     },
-
     {
         path: '/upload',
         component: Upload,
