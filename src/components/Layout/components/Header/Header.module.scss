@@ -2,7 +2,7 @@
     --search-border-radius: 92px;
     --search-height: 46px;
     --search-top-spacer: 9px;
-    --search-button-width: var(--search-button-width);
+    --search-button-width: 52px;
 
     width: 100%;
     height: var(--default-layout-header-height, 60px);
@@ -18,9 +18,14 @@
     justify-content: space-between;
 }
 
-.search {
+.search,
+.search-results {
     width: 361px;
+}
+
+.search {
     height: var(--search-height);
+    position: relative;
     padding-left: 16px;
     display: flex;
     border: 1.5px solid transparent;
@@ -55,6 +60,13 @@
     }
 }
 
+.search-title {
+    font-weight: 500;
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    color: rgba(22, 24, 35, 0.5);
+}
+
 .clear,
 .loading {
     position: absolute;
@@ -82,5 +94,9 @@
     }
 }
 
-.actions {
+.more-btn {
+    font-size: 2rem;
+    margin-left: 24px;
+    padding: 4px 8px;
+    background: transparent;
 }
