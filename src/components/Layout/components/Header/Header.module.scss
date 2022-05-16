@@ -13,6 +13,7 @@
 
 .inner {
     width: var(--default-layout-width);
+    padding: var(--default-padding-horizontal-spacer);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -94,9 +95,32 @@
     }
 }
 
+// actions
+.actions {
+    display: flex;
+    align-items: center;
+}
+
 .more-btn {
     font-size: 2rem;
     margin-left: 24px;
     padding: 4px 8px;
     background: transparent;
+    cursor: pointer;
+}
+
+.action-btn {
+    color: #161823;
+    font-size: 2.2rem;
+    background-color: transparent;
+    padding: 4px 8px;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
 }
