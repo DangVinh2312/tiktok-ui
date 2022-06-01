@@ -10,9 +10,11 @@ import {
     faUser,
     faSignOut,
 } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
+import routesConfig from '~/config/routes'
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
@@ -64,7 +66,7 @@ function Header() {
         {
             icon: <FontAwesomeIcon icon={faUser} />,
             title: 'View profile',
-            to: '/profile',
+            to: routesConfig.profile,
         },
         {
             icon: <FontAwesomeIcon icon={faCoins} />,
@@ -88,7 +90,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt='Tiktok Logo' />
+                <Link to={routesConfig.root} className={cx('logo-link')}>
+                    <img src={images.logo} alt='Tiktok Logo' />
+                </Link>
 
                 {/* Search */}
                 <Search />
