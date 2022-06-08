@@ -1,7 +1,7 @@
-import routesConfig from '~/config/routes'
+import config from '~/config';
 
 // layouts
-import { HeaderOnly } from '~/components/Layout';
+import { HeaderOnly } from '~/layouts';
 
 // pages
 import Home from '~/pages/Home';
@@ -12,19 +12,19 @@ import Upload from '~/pages/Upload';
 // public routes
 const publicRoutes = [
     {
-        path: routesConfig.root,
+        path: config.routes.root,
         component: Home,
     },
     {
-        path: routesConfig.following,
+        path: config.routes.following,
         component: Following,
     },
     {
-        path: routesConfig.search,
+        path: config.routes.search,
         component: Profile,
     },
     {
-        path: routesConfig.upload,
+        path: config.routes.upload,
         component: Upload,
         layout: HeaderOnly,
     },
